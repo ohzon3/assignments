@@ -1,0 +1,93 @@
+body { background-color: #000033;
+      background-image: none;
+       color: #003300;
+       font-family: Arial, Helvetica, sans-serif; 
+}
+#wrapper { width: 100%;
+           margin-left: 0;
+		   margin-right: 0;
+		   background-color: #e5e5b2;
+		   min-width: 0;
+		   padding: 0;
+		   border: 1px ridge #00332B; 
+		   -webkit-box-shadow: inset -3px -3px 3px 3px #00332B;
+			-moz-box-shadow: inset -3px -3px 3px 3px #00332B;
+			box-shadow: inset -3px -3px 3px 3px #00332B;
+           -webkit-border-radius: 15px;
+           -moz-border-radius: 15px;
+            border-radius: 15px;
+		   
+ }
+.floatleft{float: none;
+            padding-right: 0;
+			padding-bottom: 0; }
+h2 { color:#003366;
+	 margin: 0;
+}
+h3{ color:#006600;
+	padding-top: 10px;
+	margin: 0;
+}
+dd {font-style:italic; 
+    font-size:.90em;
+    line-height:100%;
+}
+#header { color:#48751A;
+       background-image: none; 
+	   background-repeat: no-repeat; 
+	   text-shadow: 1px 1px 1px #000033;
+	   margin: 0;
+	   height: 70px;
+	   padding-bottom: 0.4em;
+}
+	   
+h1 { padding-left:2em;
+	text-indent: 0; } 		  
+		  
+#left { float: none;
+        width: 100%; 
+		padding: 0;
+		margin: 0; }
+		
+#left ul { list-style-type: none;
+   margin: 0;
+   padding-left: 0; }
+
+#left a { text-decoration: none; 
+         display: block;
+         text-align: center;
+         color: #FFFFCC;
+         border: 3px outset #cccccc;
+         padding: 0.3em;
+		 font-weight: bold;
+		 width: 92%}
+		 
+#left a:link { background-color: #003366; }
+#left a:visited{ background-color: #48751A; }
+#left a:hover { border: 3px inset #333333; }
+#right { margin-left: 0;
+        padding: 0.5em; 
+		font-size: 90%;}
+		
+#right p, #right ul, #right dd, #right dt {margin: 0.5em;}		
+		
+.contact { font-family: "Times New Roman", serif;
+           font-size: .90em;
+           font-weight:bold;
+}
+.nav { font-weight: bold;
+       font-size: 1.2em;
+	   display: none;
+}
+#footer { font-size: .60em;
+          font-style: italic;
+		  clear: both;
+		  padding-left: 0.5em;
+		  padding-right:0.5em;
+}
+img { border-style: none; }
+.clear {clear: left; }
+#mobile { display: none; }
+#desktop{ display: inline; } 
+
+  

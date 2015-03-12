@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- Typical jQuery Mobile header goes here -->
+
+	<title>Top Films</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0b3/jquery.mobile-1.0b3.min.css"/>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+	<script type="text/javascript" src="http://code.jquery.com/mobile/1.0b3/jquery.mobile-1.0b3.min.js"></script>
+		
+	<style>
+		img.poster
+		{
+			display:block;
+			margin-left:auto;
+			margin-right:auto;
+		}
+	</style>
+</head>
+
+<body>
+	<div data-role="page" id="home">
+		<div data-role="header">
+			<h1>Top Films</h1>
+		</div>
+		
+		<div data-role="main" class="ui-content">
+			<ul data-role="listview" data-theme="b">
+			<li><a href="#movie1">The Shawshank Redemption</a></li>
+			<li><a href="#movie2">The Godfather</a></li>
+		</div>
+		
+		<div data-role="footer">
+			<h1>MIS 565</h1>
+		</div>
+	</div>
+	
+	<div data-role="page" id="movie1">
+		<div data-role="header">
+			<h1>The Shawshank Redemption</h1>
+		</div>
+		
+		<div data-role="main" class="ui-content">
+			<img src="/image/1shawshank.jpg" class="poster">
+			<a href="http://www.imdb.com/title/tt0111161/" data-role="button">IMDB Page </a>
+			<a href="#home" data-role="button" data-icon="home" data-transition="slide" data-direction="reverse">Return to list</a>
+		</div>
+		
+		<div data-role="footer">
+			<h1>MIS 565</h1>
+		</div>
+		
+	</div>
+	
+	<div data-role="page" id="movie2">
+		<div data-role="header">
+			<h1>The Godfather</h1>
+		</div>
+		
+		<div data-role="main" class="ui-content">
+			<img src="/image/2godfather.jpg" class="poster">
+			<a href="http://www.imdb.com/title/tt0068646/" data-role="button">IMDB Page </a>
+			<a href="#home" data-role="button" data-icon="home" data-transition="slide" data-direction="reverse">Return to list</a>
+		</div>
+		
+		<div data-role="footer">
+			<h1>Hello World Apps</h1>
+		</div>
+		
+	</div>
+	
+	
+</body>
+	
+</html>

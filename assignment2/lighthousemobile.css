@@ -1,0 +1,65 @@
+body {font-family:Verdana, Arial, sans-serif;
+      background-color: #00005D;
+}
+#wrapper { width: 100%;
+           margin-left: 0;
+		   margin-right: 0;
+		   background-color: #b3c7e6;
+		   min-width: 0;
+		   padding: 0;
+           color: #000066;
+           width: 80%;
+		   margin: 0 auto;
+           -webkit-box-shadow: inset -3px -3px 3px 3px #869DC7;
+		   -moz-box-shadow: inset -3px -3px 3px 3px #869DC7;
+			box-shadow: inset -3px -3px 3px 3px #869DC7;
+           -webkit-border-radius: 15px;
+           -moz-border-radius: 15px;
+} 
+#header { background-color: #869dc7;
+        color: #00005D; 
+        font-size: 100%; 
+        padding: 10px 10px 10px 155px;
+		background-image: url(lighthouselogo.jpg); 
+		background-repeat: no-repeat;
+}
+#nav { float: right;
+	   width: 150px;
+	   letter-spacing:0.1em;
+	   font-weight: bold;
+} 
+#content {  background-color: #ffffff;
+           color: #000000;
+		   padding: 10px 20px;
+	       overflow: auto;  
+} 
+#footer {font-size:70%;
+         text-align: center;
+         padding: 10px;
+		 background-color: #869dc7;
+		 clear: both;
+}
+h1 {margin-bottom: 20px; }
+h2 { color: #869dc7; 
+     font-family: arial, sans-serif;
+}
+
+#floatright { margin: 0;
+             float: none; }
+
+	
+#nav ul { list-style-type: none; 
+                 margin: 0;
+				 padding: 0;
+}
+
+#nav a { text-decoration: none; 
+                display: block;
+	            padding: 20px;   
+                background-color: #b3c7e6;				
+				border-bottom: 1px solid #ffffff;
+}
+#nav a:link { color: #ffffff; }
+#nav a:visited { color: #eaeaea; }
+#nav a:hover { background-color: #eaeaea;
+              color: #869dc7; }
