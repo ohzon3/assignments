@@ -2,14 +2,13 @@ body {font-family:Verdana, Arial, sans-serif;
       background-color: #00005D;
 }
 #wrapper { width: 100%;
-           margin-left: 0;
-		   margin-right: 0;
+           margin: 0;
 		   background-color: #b3c7e6;
 		   min-width: 0;
 		   padding: 0;
            color: #000066;
-           width: 80%;
-		   margin: 0 auto;
+           width: 100%;
+		   margin: 0;
            -webkit-box-shadow: inset -3px -3px 3px 3px #869DC7;
 		   -moz-box-shadow: inset -3px -3px 3px 3px #869DC7;
 			box-shadow: inset -3px -3px 3px 3px #869DC7;
@@ -19,18 +18,20 @@ body {font-family:Verdana, Arial, sans-serif;
 #header { background-color: #869dc7;
         color: #00005D; 
         font-size: 100%; 
-        padding: 10px 10px 10px 155px;
-		background-image: url(lighthouselogo.jpg); 
+        padding: 0.3em 0 0 0.3em;
+		background-image: url(mobilelogo.jpg); 
+		background-position: right top;
 		background-repeat: no-repeat;
 }
-#nav { float: right;
-	   width: 150px;
-	   letter-spacing:0.1em;
+#nav { float: none;
+	   width: 100%;
+	   font-size: 1em;
+	   letter-spacing:0em;
 	   font-weight: bold;
 } 
 #content {  background-color: #ffffff;
            color: #000000;
-		   padding: 10px 20px;
+		   padding: 0.3em;
 	       overflow: auto;  
 } 
 #footer {font-size:70%;
