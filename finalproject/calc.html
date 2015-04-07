@@ -26,7 +26,7 @@
 			princ = form.price.value - form.dp.value;
 			intRate = (form.ir.value/100)/12;
 			months = form.term.value * 12;
-			form.pmt.value = Math.floor((princ * intRate)/(1-Math.pow(1+intRate,(-1*months)))/100)/100;
+			form.pmt.value = Math.floor((princ * intRate)/(1-Math.pow(1+intRate,(-1*months)))*100)/100;
 			form.principle.value = princ;
 			form.payments.value = months;
 		}
