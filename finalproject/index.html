@@ -1,0 +1,448 @@
+<!--
+/*********************
+ *A1 Realty          *
+ * Kevin Oh		     *
+ * MIS565 - SP '15   *
+ * 04/20/15          *
+ *                   *
+ * Final             *
+ ********************/
+ -->
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>A1 Realty</title>
+		<meta name="viewport" content="Width=device-width,initial-scale=1">
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.0/jquery.mobile-1.3.0.min.css" />
+		<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+		<script src="http://code.jquery.com/mobile/1.3.0/jquery.mobile-1.3.0.min.js"></script>
+		
+		<script Language="JavaScript">		
+		<!--
+		function checkForZero(field)
+		{
+			if (field.value == 0 || field.value.length == 0)
+			{
+				alert ("This field cannot be 0!");
+				field.focus();
+			}
+			else
+				calculatePayment(field.form);
+		}
+
+		function calculatePayment(form)
+		{
+			princ = form.price.value - form.dp.value;
+			intRate = (form.ir.value/100)/12;
+			months = form.term.value * 12;
+			form.pmt.value = Math.floor((princ * intRate)/(1-Math.pow(1+intRate,(-1*months)))*100)/100;
+			form.principle.value = princ;
+			form.payments.value = months;
+		}
+		
+		function cmdCalc_Click(form)
+		{
+			if (form.price.value == 0 || form.price.value.length == 0)
+			{
+				alert ("The price field cannot be 0!");
+				form.price.focus();
+			}
+			else if (form.ir.value == 0 || form.ir.value.length == 0)
+			{
+				alert ("The intereset rate cannot be 0!");
+				form.ir.focus();
+			}
+			else if (form.term.value == 0 || form.term.value.length == 0)
+			{
+				alert ("The term length cannot be 0!");
+				form.term.focus();
+			}
+			else 
+				calculatePayment(form);
+		}
+		//-->
+		</script>
+				
+		<style>
+			.logo
+			{
+				width:100%;
+				background-color:#000;
+				text-align:center;
+				padding:5px 0;
+			}
+			.auto-style1 {
+				text-align: right;
+			}
+		</style>
+	</head>
+	<body>
+		<!--Home Page-->
+		<div data-role="page" id="home">
+			<!--Header with Logo-->
+			<div data-role="header">
+				<div class="logo">
+					<img src="img/logo.jpg" border="0" alt="logo" height="40"/>
+				</div>	
+			</div>
+			<!--Header-->
+			<div data-role="content">
+				<!--Navigation Links-->
+				<ul data-role="listview" data-theme="e">
+					<li><a href="#listings">Featured Listings</a></li>
+					<li><a href="#buytips">Buying and Tips</a></li>
+					<li><a href="#calculator">Mortgage Calculator</a></li>
+					<li><a href="#gallery">View Our Photo Gallery</a></li>
+					<li><a href="#buyerinfo">Buyer Information</a></li>
+					<li><a href="#aboutus">About Us</a></li>
+					<li><a href="#contact">Contact Us</a></li>
+					<li><a href="#feedback">Feedback</a></li>
+				</ul>
+			</div>
+			<!--Footer with Copyright-->
+			<div data-role="footer">
+				<h5>A1 Realty &copy; All Rights Reserved</h5>
+			</div>
+		</div>			
+
+		<!--Subpage : Listings Main-->
+		<div data-role="page" id="listings">
+			<!--Header with Logo-->
+			<div data-role="header">
+				<div class="logo">
+					<img src="img/logo.jpg" border="0" alt="logo" height="40"/>
+				</div>
+				<h1>Featured Listings</h1>
+			</div>	
+			<!--Header with Home Button/More Listings-->
+			<div data-role="header" data-theme="e">
+				<a href="#home" data-icon="home" data-iconpos="left" data-direction="reverse">Home</a>
+				<h1></h1>
+				<a href="#listings2" data-icon="arrow-r" data-iconpos="right">More Listings</a>	 
+			</div>
+			<!--Listings Main : Page Content-->
+			<div data-role="content" style="background-color:#ffffff;">
+				
+			</div>
+			<br><br>
+			<!--Footer with Copyright/More Listings-->
+			<div data-role="footer" data-theme="e" align="center">
+				<a href="#home" data-icon="home" data-iconpos="left" data-direction="reverse">Home</a>
+				<a href="#listings2" data-icon="arrow-r" data-iconpos="right">More Listings</a>
+			</div>	
+			<div data-role="footer">
+				<h5>A1 Realty &copy; All Rights Reserved</h5>
+			</div>				
+		</div>
+		
+		<!--Subpage : Buying and Tips Main-->
+		<div data-role="page" id="buytips">
+			<!--Header with Logo-->
+			<div data-role="header">
+				<div class="logo">
+					<img src="img/logo.jpg" border="0" alt="logo" height="40"/>
+				</div>
+				<h1>Buying and Tips</h1>
+			</div>	
+			<!--Header with Home Button/Back Button-->
+			<div data-role="header" data-theme="e">
+				<a href="#home" data-icon="home" data-iconpos="left" data-direction="reverse">Home</a>
+				<h1></h1>
+				<a href="javascript:history.go(-1)" data-icon="back" data-iconpos="right" data-direction="reverse">Back</a>	
+			</div>
+			<!--Buying and Tips Main : Page Content-->
+			<div data-role="content" style="background-color:#ffffff;">
+				<ul data-role="listview" data-theme="d">
+					<li>Do not rush into the transaction: Become familiar with the local market before making a purchase offer.</li>
+					<li>Ask questions: First-time homebuyers simply don't have home buying experience. It may be uncomfortable to ask questions, but ask anyway. Brokers can't answer unasked inquiries.</li>
+					<li>Avoid Overbuying: A pre-approval can help determine a reasonable target price range and also identify the mortgage programs which can work best for you.</li>
+					<li>Waiting to have a 20% down payment: Consider using 80/10/10 financing, VA, FHA and loans with private mortgage insurance (PMI).</li>
+					<li>Be realistic: It's tough to ignore a home's curb appeal, but what about practical matters? Enough space? Off-street parking? Good construction? Low maintenance? How far to work?</li>
+					<li>What about zoning? : Is the property next door zoned for a 24-hour service station? Fire station? Nuclear test site? Ask the broker about zoning for the property and also the surrounding area.</li>
+					<li>Have the home inspected by a professional: Speak with inspectors before you enter the marketplace to see how they work, what they cost and what they recommend.</li>
+					<li>Do not underestimate closing costs: A1 Realty can help you estimate probable closing expenses - information you need to avoid unwanted financial surprises.</li>
+				</ul>
+			</div>
+			<br><br>
+			<!--Footer with Copyright/Home-->
+			<div data-role="footer" data-theme="e" align="center">
+				<a href="#home" data-icon="home" data-iconpos="left" data-direction="reverse">Home</a>
+			</div>	
+			<div data-role="footer">
+				<h5>A1 Realty &copy; All Rights Reserved</h5>
+			</div>
+		</div>
+
+		<!--Subpage : Mortgage Calculator Main-->
+		<div data-role="page" id="calculator">
+			<!--Header with Logo-->
+			<div data-role="header">
+			    <div  class="logo">
+				<img src="img/logo.jpg" border="0" alt="logo" height="40"/>
+			    </div>
+				<h1>Mortgage Calculator</h1>
+			</div>
+			<!--Header with Home Button-->
+			<div data-role="header" data-theme="e">
+		      <h1></h1>
+				<a href="#home" data-icon="home" data-iconpos="left" data-direction="reverse">Home</a>
+				<a href="javascript:history.go(-1)"data-icon="button" data-icon="arrow-r" data-iconpos="right">Back</a>          
+			</div>	
+			
+			<!--Mortgage Calculator Main : Page Content-->
+			<div data-role="content" style="background-color:#ffffff;vertical-align:middle">
+			
+			</div>
+
+			<TABLE>
+				<TR>
+					<TD VALIGN=TOP>
+
+						<FORM NAME="Mortgage Calculator">
+
+							<TABLE WIDTH=250 BORDER=5 BGCOLOR=SILVER CELLPADDING=2>
+								<TR>
+									<TD COLSPAN=2 ALIGN=CENTER>
+										<B><FONT SIZE=+2 COLOR=BLUE>Mortgage Calculator</B>
+									</TD>
+								</TR>
+
+								<TR>
+									<TD COLSPAN=2 WIDTH=50%> 
+										<TABLE BORDER=0 CELLPADDING=2>
+
+											<TR>
+												<TD COLSPAN=2><B>Mortgage Data:</B></TD>
+
+											<TR>
+												<TD ALIGN=RIGHT>House Price:</TD>
+												<TD>
+													<INPUT TYPE=TEXT NAME=price VALUE="200000" SIZE=7 onBlur=checkForZero(this) onChange=checkForZero(this)>
+												</TD>
+											</TR>
+
+											<TR>
+												<TD ALIGN=RIGHT>Down Payment:</TD>
+												<TD>
+													<INPUT TYPE=TEXT NAME=dp VALUE=0 onChange=calculatePayment(this.form) SIZE=7>
+												</TD>
+											</TR>
+
+											<TR>
+												<TD ALIGN=RIGHT>Interest Rate:</TD>
+												<TD>
+													<INPUT TYPE=TEXT NAME=ir VALUE="7.5" SIZE=4 onBlur=checkForZero(this)onChange=checkForZero(this)>%
+												</TD>
+											</TR>
+											<TR>
+												<TD ALIGN=RIGHT>Term:</TD>
+												<TD>
+													<INPUT  TYPE=TEXT NAME=term VALUE="30" SIZE=4 onBlur=checkForZero(this) nChange=checkForZero(this)>(Years)
+												</TD>
+											</TR>
+
+										</TABLE>
+									</TD>
+								</TR>
+
+								<TR>
+									<TD>
+										<TABLE BORDER=0 CELLPADDING=2>
+
+											<TR>
+												<TD COLSPAN=2><B>Results:</B></TD>
+											</TR>
+											<tr>
+												<TD ALIGN=RIGHT>Mortgage Principle:</TD>
+												<TD>
+													<INPUT TYPE=TEXT NAME=principle SIZE=7>
+												</TD>
+											</tr>
+											<TR>
+												<TD ALIGN=RIGHT>Total Payments:</TD>
+												<TD>
+													<INPUT TYPE=TEXT NAME=payments SIZE=7>
+												</TD>
+											</TR>
+
+											<TR>
+												<TD ALIGN=RIGHT>Monthly Payment:</TD>
+												<TD>
+													<INPUT TYPE=TEXT NAME=pmt SIZE=7>
+												</TD>
+											</TR>
+										</TABLE>
+									</TD>
+								</TR>
+
+								<TR>
+									<TD ALIGN=CENTER COLSPAN=2>
+										<INPUT TYPE=BUTTON NAME="cmdCalc" VALUE="Calculate" onClick=cmdCalc_Click(this.form)>
+									</TD>
+								</TR>
+							</TD>
+						</TR>
+					</TABLE>
+
+				</FORM>
+			</TD>
+		</TABLE>
+			</div>
+			<!--Footer with Copyright/Home-->
+			<div data-role="footer" data-theme="e" align="center">
+              <a href="#home" data-icon="home" data-iconpos="left" data-direction="reverse">Home</a>
+              <a href="javascript:history.go(-1)" data-icon="back" data-iconpos="right" data-direction="reverse">Back</a>	
+            </div>
+			<div data-role="footer">
+				<h5>A1 Realty&copy All Rights Reserved</h5>
+			</div>
+		</div>
+		
+		<!--Subpage : Photo Gallery-->
+		<div data-role="page" id="gallery">
+			<!--Header with Logo-->
+			<div data-role="header">
+				<div class="logo">
+					<img src="img/logo.jpg" border="0" alt="logo" height="40"/>
+				</div>
+				<h1>Our Photo Gallery</h1>
+			</div>	
+			<!--Header with Home Button/Back Button-->
+			<div data-role="header" data-theme="e">
+				<a href="#home" data-icon="home" data-iconpos="left" data-direction="reverse">Home</a>
+				<h1></h1>
+				<a href="javascript:history.go(-1)" data-icon="back" data-iconpos="right" data-direction="reverse">Back</a>	 
+			</div>
+			<!--Photo Gallery Main : Page Content-->
+			<div data-role="content" style="background-color:#ffffff;">
+				Photo Gallery Stuff
+			</div>
+			<br><br>
+			<!--Footer with Copyright/Home-->
+			<div data-role="footer" data-theme="e" align="center">
+				<a href="#home" data-icon="home" data-iconpos="left" data-direction="reverse">Home</a>
+			</div>	
+			<div data-role="footer">
+				<h5>A1 Realty &copy; All Rights Reserved</h5>
+			</div>				
+		</div>
+
+		<!--Subpage : Buyer Information-->
+		<div data-role="page" id="buyerinfo">
+			<!--Header with Logo-->
+			<div data-role="header">
+				<div class="logo">
+					<img src="img/logo.jpg" border="0" alt="logo" height="40"/>
+				</div>
+				<h1>Buyer Information</h1>
+			</div>	
+			<!--Header with Home Button/Back Button-->
+			<div data-role="header" data-theme="e">
+				<a href="#home" data-icon="home" data-iconpos="left" data-direction="reverse">Home</a>
+				<h1></h1>
+				<a href="javascript:history.go(-1)" data-icon="back" data-iconpos="right" data-direction="reverse">Back</a>	 
+			</div>
+			<!--Photo Gallery Main : Page Content-->
+			<div data-role="content" style="background-color:#ffffff;">
+				Buyer Information Stuff
+			</div>
+			<br><br>
+			<!--Footer with Copyright/Home-->
+			<div data-role="footer" data-theme="e" align="center">
+				<a href="#home" data-icon="home" data-iconpos="left" data-direction="reverse">Home</a>
+			</div>	
+			<div data-role="footer">
+				<h5>A1 Realty &copy; All Rights Reserved</h5>
+			</div>				
+		</div>
+		
+		<!--Subpage : About Us-->
+		<div data-role="page" id="aboutus">
+			<div data-role="header">
+				<div class="logo">
+					<img src="img/logo.jpg" border="0" alt="logo" height="40"/>
+				</div>						
+				<h1>About Us</h1>
+			</div>
+			<div data-role="header" data-theme="e">
+				<a href="#home" data-icon="home" data-iconpos="left" data-direction="reverse">Home</a>
+				<h1></h1>
+				<a href="javascript:history.go(-1)" data-icon="back" data-iconpos="right" data-direction="reverse">Back</a>	
+			</div>
+			<div data-role="content" style="background-color:#ffffff">
+				<p>
+					At A1 Realty, we are passionate about delivering exceptional consumer experiences. With servicing a niche market within the Chicago, Illinois area, we provide one-of-a-kind service to our clients. A1 Realty's outstanding track record, unique brand promise, and exceptional agent support system attract top talent, ensuring that our team of experts represents the very best in the industry. Here we believe that access to the best and most timely information can dramatically shape our decisions. Today's consumer needs a trusted resource that can separate signal from noise and help them navigate the complex process that real estate has become. With our extensive knowledge in every aspect of the field, and fueled by consumer research and insights, we are the go-to source for information and education.
+				</p>
+				<p>Here we believe that access to the best and most timely information can dramatically shape our decisions. 
+				</p>
+			</div>
+			<br>
+			<!--Footer with Copyright/Home-->
+			<div data-role="footer" data-theme="e" align="center">
+				<a href="#home" data-icon="home" data-iconpos="left" data-direction="reverse">Home</a>
+			</div>	
+			<div data-role="footer">
+				<h5>A1 Realty &copy; All Rights Reserved</h5>
+			</div>		
+		</div>
+		
+		<!--Subpage : Contact Us-->
+		<div data-role="page" id="contact">
+			<!--Header with Logo-->
+			<div data-role="header">
+				<div class="logo">
+					<img src="img/logo.jpg" border="0" alt="logo" height="40"/>
+				</div>
+				<h1>Contact Us</h1>
+			</div>	
+			<!--Header with Home Button/Back Button-->
+			<div data-role="header" data-theme="e">
+				<a href="#home" data-icon="home" data-iconpos="left" data-direction="reverse">Home</a>
+				<h1></h1>
+				<a href="javascript:history.go(-1)" data-icon="back" data-iconpos="right" data-direction="reverse">Back</a>	 
+			</div>
+			<!--Photo Gallery Main : Page Content-->
+			<div data-role="content" style="background-color:#ffffff;">
+				Contact Information
+			</div>
+			<br><br>
+			<!--Footer with Copyright/Home-->
+			<div data-role="footer" data-theme="e" align="center">
+				<a href="#home" data-icon="home" data-iconpos="left" data-direction="reverse">Home</a>
+			</div>	
+			<div data-role="footer">
+				<h5>A1 Realty &copy; All Rights Reserved</h5>
+			</div>				
+		</div>
+		
+		<!--Subpage : Feedback-->
+		<div data-role="page" id="feedback">
+			<!--Header with Logo-->
+			<div data-role="header">
+				<div class="logo">
+					<img src="img/logo.jpg" border="0" alt="logo" height="40"/>
+				</div>
+				<h1>Give us feedback!</h1>
+			</div>	
+			<!--Header with Home Button/Back Button-->
+			<div data-role="header" data-theme="e">
+				<a href="#home" data-icon="home" data-iconpos="left" data-direction="reverse">Home</a>
+				<h1></h1>
+				<a href="javascript:history.go(-1)" data-icon="back" data-iconpos="right" data-direction="reverse">Back</a>	 
+			</div>
+			<!--Photo Gallery Main : Page Content-->
+			<div data-role="content" style="background-color:#ffffff;">
+				Feedback
+			</div>
+			<br><br>
+			<!--Footer with Copyright/Home-->
+			<div data-role="footer" data-theme="e" align="center">
+				<a href="#home" data-icon="home" data-iconpos="left" data-direction="reverse">Home</a>
+			</div>	
+			<div data-role="footer">
+				<h5>A1 Realty &copy; All Rights Reserved</h5>
+			</div>				
+		</div>
+		
+	</body>
+</html>	
