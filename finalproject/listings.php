@@ -43,7 +43,7 @@
 			</div>	
 			<!--Header with Home Button/More Listings-->
 			<div data-role="header" data-theme="e">
-				<a href="#home" data-icon="home" data-iconpos="left" data-direction="reverse">Home</a>
+				<a href="index.html" data-icon="home" data-iconpos="left" data-direction="reverse">Home</a>
 				<h1></h1>
 				<a href="#listings2" data-icon="arrow-r" data-iconpos="right">More Listings</a>	 
 			</div>
@@ -96,12 +96,41 @@
 			<br><br>
 			<!--Footer with Copyright/More Listings-->
 			<div data-role="footer" data-theme="e" align="center">
-				<a href="#home" data-icon="home" data-iconpos="left" data-direction="reverse">Home</a>
+				<a href="index.html" data-icon="home" data-iconpos="left" data-direction="reverse">Home</a>
 				<a href="#listings2" data-icon="arrow-r" data-iconpos="right">More Listings</a>
 			</div>	
 			<div data-role="footer">
 				<h5>A1 Realty &copy; All Rights Reserved</h5>
 			</div>				
+		</div>
+		
+		<!--Subpage : Listings Page 2 Main-->
+		<div data-role="page" id="listings2">
+			<div data-role="header">
+				<div class="logo">
+					<img src="logo.jpg" border="0" alt="logo" height="40"/>
+				</div>						
+				<h1>More Listings</h1>
+			</div>
+			<div data-role="header" data-theme="e">
+				<a href="index.html" data-icon="home" data-iconpos="left" data-direction="reverse">Home</a>
+				<h1></h1>
+				<a href="#listings" data-icon="arrow-r" data-iconpos="right">Previous Listings</a>
+			</div>
+			<div data-role="content" style="background-color:#ffffff">
+				<p>
+					At A1 Realty, we are passionate about delivering exceptional consumer experiences. With servicing a niche market within the Chicago, Illinois area, we provide one-of-a-kind service to our clients. A1 Realty's outstanding track record, unique brand promise, and exceptional agent support system attract top talent, ensuring that our team of experts represents the very best in the industry. Here we believe that access to the best and most timely information can dramatically shape our decisions. Today's consumer needs a trusted resource that can separate signal from noise and help them navigate the complex process that real estate has become. With our extensive knowledge in every aspect of the field, and fueled by consumer research and insights, we are the go-to source for information and education.
+				</p>
+			</div>
+			<br>
+			<!--Footer with Copyright/Home-->
+			<div data-role="footer" data-theme="e" align="center">
+				<a href="index.html" data-icon="home" data-iconpos="left" data-direction="reverse">Home</a>
+				<a href="#listings" data-icon="arrow-r" data-iconpos="right">Previous Listings</a>
+			</div>	
+			<div data-role="footer">
+				<h5>A1 Realty &copy; All Rights Reserved</h5>
+			</div>		
 		</div>
 	</body>
 </html>	

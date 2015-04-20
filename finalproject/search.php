@@ -6,7 +6,7 @@
  * 04/20/15          *
  *                   *
  * Final             *
- * Gallery			 *
+ * Search			 *
  ********************/
  -->
 <!DOCTYPE html>
@@ -33,13 +33,13 @@
 	</head>
 	<body>
 		<!--Subpage : Photo Gallery Main-->
-		<div data-role="page" id="gallery">
+		<div data-role="page" id="search">
 			<!--Header with Logo-->
 			<div data-role="header">
 				<div class="logo">
 					<img src="logo.jpg" border="0" alt="logo" height="40"/>
 				</div>
-				<h1>Our Photo Gallery</h1>
+				<h1>Search for a Property</h1>
 			</div>	
 			<!--Header with Home Button/Back Button-->
 			<div data-role="header" data-theme="e">
@@ -69,7 +69,6 @@
 
 							$result = mysqli_query($connection, $query); 
 							
-							$columncounter = 0;
 							if ($result) {
 								$count = mysqli_num_rows($result);
 								
@@ -82,27 +81,12 @@
 										$columncounter++;
 										echo '0test';
 									}
-									else if ($columncounter = 1){
-										echo "<div class='ui-block-b'><img width='200px' src='".$row['image']."'></img></div>";
-										$columncounter++;
-										echo '1test';
-									}
-									else {
-										echo "<div class='ui-block-c'><img width='200px' src='".$row['image']."'></img></div>";
-										$columncounter = 0;
-										echo '2test';
-									}
-									
-									
-									
-									
 								}
 								echo '</div>';
-								
 							}
 							else{
 								echo '<br>Sorry, something went wrong. Please contact us at (888)555-1234';
-								}
+							}
 					}
 				} 
 				?>
