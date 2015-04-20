@@ -1,0 +1,121 @@
+<!--
+/*********************
+ * A1 Realty         *
+ * Kevin Oh		     *
+ * MIS565 - SP '15   *
+ * 04/20/15          *
+ *                   *
+ * Final             *
+ * Buyer Information *
+ ********************/
+ -->
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>A1 Realty</title>
+		<meta name="viewport" content="Width=device-width,initial-scale=1">
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.0/jquery.mobile-1.3.0.min.css" />
+		<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+		<script src="http://code.jquery.com/mobile/1.3.0/jquery.mobile-1.3.0.min.js"></script>
+		
+		<style>
+			.logo
+			{
+				width:100%;
+				background-color:#000;
+				text-align:center;
+				padding:5px 0;
+			}
+			.auto-style1 {
+				text-align: right;
+			}
+		</style>
+	</head>
+	<body>
+	
+<?php
+
+$nameErr = $emailErr = $phoneErr = "";
+$name = $email = $phone = $comment = "";
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+   if (empty($_POST["name"])) {
+     $nameErr = "Name is required";
+   } else {
+     $name = test_input($_POST["name"]);
+   }
+   
+   if (empty($_POST["email"])) {
+     $emailErr = "Email is required";
+   } else {
+     $email = test_input($_POST["email"]);
+   }
+     
+   if (empty($_POST["phone"])) {
+     $phone = "";
+   } else {
+     $phone = test_input($_POST["phone"]);
+   }
+
+   if (empty($_POST["comment"])) {
+     $comment = "";
+   } else {
+     $comment = test_input($_POST["comment"]);
+   }
+}
+
+function test_input($data) {
+   $data = trim($data);
+   $data = stripslashes($data);
+   $data = htmlspecialchars($data);
+   return $data;
+}
+
+?>	
+
+		<!--Subpage : Buyer Information-->
+		<div data-role="page" id="buyerinfo">
+			<!--Header with Logo-->
+			<div data-role="header">
+				<div class="logo">
+					<img src="img/logo.jpg" border="0" alt="logo" height="40"/>
+				</div>
+				<h1>Buyer Information</h1>
+			</div>	
+			<!--Header with Home Button/Back Button-->
+			<div data-role="header" data-theme="e">
+				<a href="index.html" data-icon="home" data-iconpos="left" data-direction="reverse">Home</a>
+				<h1></h1>
+				<a href="javascript:history.go(-1)" data-icon="back" data-iconpos="right" data-direction="reverse">Back</a>	 
+			</div>
+			<!--Photo Gallery Main : Page Content-->
+			<div data-role="content" style="background-color:#ffffff;">
+				
+				<p><span class="error">* required field.</span></p>
+				<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"> 
+					Name: <input type="text" name="name">
+					<span class="error">* <?php echo $nameErr;?></span>
+					<br><br>
+					E-mail: <input type="text" name="email">
+					<span class="error">* <?php echo $emailErr;?></span>
+					<br><br>
+					Phone Number: <input type="text" name="phone">
+					<span class="error"><?php echo $phoneErr;?></span>
+					<br><br>
+					Comment: <textarea name="comment"></textarea>
+					<br><br>
+					<input type="submit" name="submit" value="Submit"> 
+				</form>
+				
+			</div>
+			<br><br>
+			<!--Footer with Copyright/Home-->
+			<div data-role="footer" data-theme="e" align="center">
+				<a href="index.html" data-icon="home" data-iconpos="left" data-direction="reverse">Home</a>
+			</div>	
+			<div data-role="footer">
+				<h5>A1 Realty &copy; All Rights Reserved</h5>
+			</div>				
+		</div>
+	</body>
+</html>	
