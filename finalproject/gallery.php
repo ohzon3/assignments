@@ -56,12 +56,14 @@
 				define("MYSQLDB", "midwest");
 
 				$connection = @mysqli_connect(HOSTNAME, MYSQLUSER, MYSQLPASS, MYSQLDB);
+				
 				if (mysqli_connect_error()) {
 					die('Connect Error: ' . mysqli_connect_error());
 				}
 				else {
 					if ($result = mysqli_query($connection, "SHOW TABLES")) {
 						$count = mysqli_num_rows($result);
+						
 						
 						$query = "SELECT * FROM properties";
 
@@ -78,23 +80,24 @@
 									if ($columncounter = 0){
 										echo "<div class='ui-block-a'><img width='200px' src='".$row['image']."'></img></div>";
 										$columncounter++;
-										echo '0';
+										echo '0test';
 									}
 									else if ($columncounter = 1){
 										echo "<div class='ui-block-b'><img width='200px' src='".$row['image']."'></img></div>";
 										$columncounter++;
-										echo '1';
+										echo '1test';
 									}
 									else {
 										echo "<div class='ui-block-c'><img width='200px' src='".$row['image']."'></img></div>";
-										$columncounter++;
-										echo '2';
+										$columncounter = 0;
+										echo '2test';
 									}
 									
 									
 									
 									
 								}
+								echo '</div>';
 								
 							}
 							else{
