@@ -93,7 +93,7 @@
 					<li><a href="#buytips">Buying and Tips</a></li>
 					<li><a href="#calculator">Mortgage Calculator</a></li>
 					<li><a href="gallery.php">View Our Photo Gallery</a></li>
-					<li><a href="#buyerinfo">Buyer Information</a></li>
+					<li><a href="buyerinfo.php">Buyer Information</a></li>
 					<li><a href="#aboutus">About Us</a></li>
 					<li><a href="#contact">Contact Us</a></li>
 					<li><a href="#feedback">Feedback</a></li>
@@ -287,20 +287,40 @@
 			<!--Buyer Information Main : Page Content-->
 			<div data-role="content" style="background-color:#ffffff;" class="ui-content">
 				Enter your information below and the MLS number or address of the property you would like more information about. A1 Realty will contact you soon. <br><br>
-				<form method="post" action="demoform.asp">
+				<form action="insert.php" method="post">
 					<label for="name">Name:</label>
-					<input type="text" name="name" id="name">
+					<input type="text" name="name">
 					<label for="phone">Phone Number:</label>
-					<input type="text" name="phone" id="phone">
+					<input type="text" name="phone">
 					<label for="email">Email Address:</label>
-					<input type="email" name="email" id="email">
+					<input type="email" name="email">
 					<label for="propertyrequest">MLS number or address of property:</label>
-					<input type="text" name="propertyrequest" id="propertyrequest"><br>
+					<input type="text" name="propertyrequest"><br>
 					<label for="comments">Comments and/or Questions:</label>
-					<input type="text" name="email" id="email"><br>
+					<input type="text" name="email"><br>
 					<input type="reset" value="Reset Form">
 					<input type="submit" value="Submit Information">
 				</form>
+				
+				<?php
+					$con=mysqli_connect("localhost","root","","midwes");
+					// Check connection
+					if (mysqli_connect_errno())
+					{
+						echo "Failed to connect to MySQL: " . mysqli_connect_error();
+					}
+					$sql="INSERT INTO buyerinfo (bName, bPhone, bEmail, bProp, bComment)
+					VALUES
+					('$_POST[name]','$_POST[phone]','$_POST[email]','$_POST[propertyrequest]','$_POST[comments]')";
+
+					if (!mysqli_query($con,$sql))
+					{
+						die('Error: ' . mysqli_error($con));
+					}
+					echo "1 record added";
+					mysqli_close($con);
+				?>
+				
 			</div>
 			<br>
 			<!--Footer with Copyright/Home-->

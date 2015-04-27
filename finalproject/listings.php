@@ -71,17 +71,9 @@
 							if ($result) {
 								$count = mysqli_num_rows($result);
 								while($row = mysqli_fetch_array($result)){
-									echo '<b>MLS#: </b>'. $row['mls'] . '<br/>'; 
+									echo "<img width='200px' src='". $row['image'] ."'></img>".'<br/>';
 									echo '<b>Address: </b>'. $row['address'] . '<br/>';
-									echo '<b>City: </b>'. $row['city'] . '<br/>';
-									echo '<b>State: </b>'. $row['state'] . '<br/>';
-									echo '<b>Zip Code: </b>'. $row['zip'] . '<br/>';
-									echo '<b>Price: $</b>'. $row['price'] . '<br/>';
-									echo '<b>Type: </b>'. $row['type'] . '<br/>';
-									echo '<b>Acres: </b>'. $row['acres'] . '<br/>';
-									echo '<b>Rooms: </b>'. $row['rooms'] . '<br/>';
-									echo '<b>Bathes: </b>'. $row['bath'] . '<br/>';
-									echo "<b>Image: </b> <img width='200px' src='". $row['image'] ."'></img>".'<br/><br/><br/>';
+									echo '<b>Price: $</b>'. $row['price'] . '<br/><br/>';
 								}
 								
 							}
@@ -119,7 +111,7 @@
 			</div>
 			<div data-role="content" style="background-color:#ffffff">
 				<p>
-					At A1 Realty, we are passionate about delivering exceptional consumer experiences. With servicing a niche market within the Chicago, Illinois area, we provide one-of-a-kind service to our clients. A1 Realty's outstanding track record, unique brand promise, and exceptional agent support system attract top talent, ensuring that our team of experts represents the very best in the industry. Here we believe that access to the best and most timely information can dramatically shape our decisions. Today's consumer needs a trusted resource that can separate signal from noise and help them navigate the complex process that real estate has become. With our extensive knowledge in every aspect of the field, and fueled by consumer research and insights, we are the go-to source for information and education.
+					More Listings
 				</p>
 			</div>
 			<br>

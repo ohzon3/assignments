@@ -49,7 +49,20 @@
 			</div>
 			<!--Photo Gallery Main : Page Content-->
 			<div data-role="content" style="background-color:#ffffff;">
+				<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+					<label for="min">Minimim Amount ($):</label>
+					<input type="text" name="min" id="min">
+					<label for="max">Maximum Amount ($):</label>
+					<input type="text" name="max" id="max">
+					<label for="proptype">Property Type:</label>
+					<input type="text" name="proptype" id="proptype">
+					<input type="reset" value="Reset Form">
+					<input type="submit" value="Submit Information">
+				</form>
+				
 				<?php
+				$min = $max = $proptype = "";
+				
 				define("MYSQLUSER", "root");
 				define("MYSQLPASS", "");
 				define("HOSTNAME", "localhost");
@@ -64,8 +77,10 @@
 					if ($result = mysqli_query($connection, "SHOW TABLES")) {
 						$count = mysqli_num_rows($result);
 						
-						
+						#TODO SELECT STATEMENT
 						$query = "SELECT * FROM properties";
+						
+						
 
 							$result = mysqli_query($connection, $query); 
 							
@@ -90,6 +105,8 @@
 					}
 				} 
 				?>
+				
+				
 				
 			</div>
 			<br><br>
