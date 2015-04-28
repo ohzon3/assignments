@@ -6,7 +6,7 @@
  * 04/20/15          *
  *                   *
  * Final             *
- * Buyer Information *
+ * Feedback *
  ********************/
  -->
 <!DOCTYPE html>
@@ -40,9 +40,9 @@
 					{
 						echo "Failed to connect to MySQL: " . mysqli_connect_error();
 					}
-					$sql="INSERT INTO buyerinfo (bName, bPhone, bEmail, bProp, bComment)
+					$sql="INSERT INTO feedback (fName, fPhone, fEmail, fComment)
 					VALUES
-					('$_POST[name]','$_POST[phone]','$_POST[email]','$_POST[propertyrequest]','$_POST[comments]')";
+					('$_POST[name]','$_POST[phone]','$_POST[email]','$_POST[feedback]')";
 
 					if (!mysqli_query($con,$sql))
 					{
@@ -52,14 +52,14 @@
 					mysqli_close($con);
 				?>
 
-<!--Subpage : Buyer Information-->
-		<div data-role="page" id="buyerinfo">
+		<!--Subpage : Feedback-->
+		<div data-role="page" id="feedback">
 			<!--Header with Logo-->
 			<div data-role="header">
 				<div class="logo">
 					<img src="logo.jpg" border="0" alt="logo" height="40"/>
 				</div>
-				<h1>Buyer Information</h1>
+				<h1>Give us feedback!</h1>
 			</div>	
 			<!--Header with Home Button/Back Button-->
 			<div data-role="header" data-theme="e">
@@ -67,26 +67,23 @@
 				<h1></h1>
 				<a href="javascript:history.go(-1)" data-icon="back" data-iconpos="right" data-direction="reverse">Back</a>	 
 			</div>
-			<!--Buyer Information Main : Page Content-->
+			<!--Feedback Main : Page Content-->
 			<div data-role="content" style="background-color:#ffffff;" class="ui-content">
-				Enter your information below and the MLS number or address of the property you would like more information about. A1 Realty will contact you soon. <br><br>
-				<form action="buyerinfo.php" method="post">
+				Enter your feedback and comments below about our website and we will take all suggestion to consideration. <br><br>
+				<form method="post" action="feedback.php">
 					<label for="name">Name:</label>
-					<input type="text" name="name">
+					<input type="text" name="name" id="name">
 					<label for="phone">Phone Number:</label>
-					<input type="text" name="phone">
+					<input type="text" name="phone" id="phone">
 					<label for="email">Email Address:</label>
-					<input type="email" name="email">
-					<label for="propertyrequest">MLS number or address of property:</label>
-					<input type="text" name="propertyrequest"><br>
-					<label for="comments">Comments and/or Questions:</label>
-					<input type="text" name="comments"><br>
+					<input type="email" name="email" id="email">
+					<label for="feedback">Feedback or Comments about our website:</label>
+					<input type="text" name="feedback" id="feedback"><br>
 					<input type="reset" value="Reset Form">
 					<input type="submit" value="Submit Information">
 				</form>
-				
 			</div>
-			<br>
+			<br><br>
 			<!--Footer with Copyright/Home-->
 			<div data-role="footer" data-theme="e" align="center">
 				<a href="#home" data-icon="home" data-iconpos="left" data-direction="reverse">Home</a>
